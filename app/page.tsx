@@ -69,7 +69,7 @@ export default async function DailyCommitPage({ searchParams }: Props) {
 
   return (
     <div className={`${blackletter.variable} ${headline.variable} ${caslon.variable}`}>
-      <DailyCommit initialBoard={board} initialError={error} initialLogin={u} owner={OWNER.github} ownerName={OWNER.name} ownerX={OWNER.x} portfolio={OWNER.portfolio} via={viaOf(searchParams)} today={today} />
+      <DailyCommit initialBoard={board} initialError={error} initialLogin={u} owner={OWNER.github} ownerName={OWNER.name} portfolio={OWNER.portfolio} via={viaOf(searchParams)} today={today} />
     </div>
   );
 }

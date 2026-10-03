@@ -23,10 +23,9 @@ export function showUpRate(b: Board) {
 // The X post, with two links. X builds its preview card from the first link, so the
 // sharer's edition goes first (the card shows their front page and the link stays
 // visible), then the link to print a new edition. No numbers or names in the words.
-export function shareText(by: string | null, mineUrl: string, newUrl: string): string {
-  const credit = by ? ` by @${by}` : "";
+export function shareText(mineUrl: string, newUrl: string): string {
   return [
-    `Got my GitHub circle printed as a front page${credit} 🗞️`,
+    "Got my first GitHub circle page printed 🗞️",
     "",
     `My stats 👉 ${mineUrl}`,
     `Check yours now 👉 ${newUrl}`,

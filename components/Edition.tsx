@@ -84,7 +84,7 @@ export function ScoreTable() {
 const BTN =
   "dc-head flex items-center justify-center text-center border-2 border-[var(--dc-ink)] px-3 py-2.5 text-[13px] sm:px-5 sm:text-[14px] font-black uppercase tracking-[0.06em] transition-colors hover:bg-[var(--dc-ink)] hover:text-[var(--dc-paper)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--dc-red)]";
 
-export default function Edition({ board, owner, ownerX, onNewEdition }: { board: Board; owner: string; ownerX: string | null; onNewEdition: () => void }) {
+export default function Edition({ board, owner, onNewEdition }: { board: Board; owner: string; onNewEdition: () => void }) {
   const [printed, setPrinted] = useState("");
   const [copied, setCopied] = useState(false);
   const [note, setNote] = useState<{ text: string; open?: string } | null>(null);
@@ -132,7 +132,7 @@ export default function Edition({ board, owner, ownerX, onNewEdition }: { board:
   const share = async () => {
     // two links: this edition first (its preview card is this front page), then a blank
     // page where the reader prints their own
-    const text = shareText(ownerX, link(), `${window.location.origin}/?via=${encodeURIComponent(board.login)}`);
+    const text = shareText(link(),`${window.location.origin}/?via=${encodeURIComponent(board.login)}`);
     const intent = `https://x.com/intent/tweet?text=${encodeURIComponent(text)}`;
     const paste = /Mac|iPhone|iPad/.test(navigator.platform) ? "⌘V" : "Ctrl+V";
     const started = performance.now();

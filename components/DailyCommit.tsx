@@ -82,7 +82,6 @@ export default function DailyCommit({
   initialLogin,
   owner,
   ownerName,
-  ownerX,
   portfolio,
   via,
   today,
@@ -92,7 +91,6 @@ export default function DailyCommit({
   initialLogin: string;
   owner: string;
   ownerName: string;
-  ownerX: string | null;
   portfolio: string;
   via: string | null;
   today: string;
@@ -299,7 +297,7 @@ export default function DailyCommit({
           </div>
         )}
 
-        {board && !loading && <Edition key={board.login} board={board} owner={owner} ownerX={ownerX} onNewEdition={newEdition} />}
+        {board && !loading && <Edition key={board.login} board={board} owner={owner} onNewEdition={newEdition} />}
 
         <footer className="dc-label mt-14 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 border-t border-[var(--dc-ink)]/40 pt-4 text-center !text-[10.5px] text-[var(--dc-ink-2)]">
           <span>
